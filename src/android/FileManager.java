@@ -32,10 +32,12 @@ public class FileManager {
     }
 
     /**
-     * Method to delete file by name of the file. This method only will delete file on directory pre-configured.
+     * Method to delete file by name of the file. This method only will delete file
+     * on directory pre-configured.
      *
      * @param fileName
-     * @return the result of the operation. True if delete was executed with success or False otherwise
+     * @return the result of the operation. True if delete was executed with success
+     *         or False otherwise
      */
     public boolean deleteFileByName(String fileName) {
         if (fileName == null || fileName.isEmpty())
@@ -80,7 +82,6 @@ public class FileManager {
      * @return the file directory
      */
     private File getFileDirectory() {
-        //File tempFile = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
         File tempFile = new File(mContext.getFilesDir().getAbsolutePath());
 
         File audioPath = new File(tempFile, FOLDER_NAME_SAVE_AUDIO);

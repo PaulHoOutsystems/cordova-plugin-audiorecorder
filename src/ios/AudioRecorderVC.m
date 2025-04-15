@@ -118,9 +118,9 @@ typedef NS_ENUM(NSUInteger, OSRecorderState) {
     int i = 1;
     do {
         if(containerExists){
-            filePath = [NSString stringWithFormat:@"%@/temp_%03d.mp4", containerPath, i++];
+            filePath = [NSString stringWithFormat:@"%@/temp_%03d.mp3", containerPath, i++];
         } else {
-            filePath = [NSString stringWithFormat:@"%@/temp_%03d.mp4", docsPath, i++];
+            filePath = [NSString stringWithFormat:@"%@/temp_%03d.mp3", docsPath, i++];
         }
     } while ([fileMgr fileExistsAtPath:filePath]);
     
@@ -128,8 +128,8 @@ typedef NS_ENUM(NSUInteger, OSRecorderState) {
     
     // create AVAudioRecorder with AAC encoding
     NSDictionary *recordSetting = [NSDictionary dictionaryWithObjectsAndKeys:
-                                   [NSNumber numberWithInt: kAudioFormatMPEG4AAC ], AVFormatIDKey,
-                                   [NSNumber numberWithFloat:24000.0], AVSampleRateKey,
+                                   [NSNumber numberWithInt: kAudioFormatAMR ], AVFormatIDKey,
+                                   [NSNumber numberWithFloat:8000.0], AVSampleRateKey,
                                    [NSNumber numberWithInt:1], AVNumberOfChannelsKey,
                                    nil];
     
